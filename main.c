@@ -18,7 +18,7 @@ int main(int argc, char **argv, char **envp)
 	while (1)
 	{
 	prompt();
-	count = getline(&c, &buf, stdin);
+	count = _getline(&c, &buf, stdin);
 	input = space(c);
 	if (count == -1)
 	{

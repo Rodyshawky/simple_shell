@@ -21,11 +21,12 @@ int main(int argc, char **argv, char **envp)
 	count = getline(&c, &buf, stdin);
 	input = space(c);
 	if (count == -1)
+	{
 		if (feof(stdin))
 		{
-			free(c);
 			exit(EXIT_SUCCESS);
 		}
+	}
 	if (input[0] == '\0')
 		continue;
 	commands = separator(input);

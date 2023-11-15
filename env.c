@@ -6,7 +6,7 @@
 */
 void env(char **envp)
 {
-	char **env;
+	char **env = envp;
 	char *all_env;
 
 	for (env = envp; *env != 0; env++)

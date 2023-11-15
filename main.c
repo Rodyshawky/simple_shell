@@ -24,8 +24,8 @@ int main(int argc, char **argv)
 			cmd = parse_cmd(commands[i]);
 			if (_strcmp(cmd[0], "exit") == 0)
 			{
-				_exit(0);
 				free(commands);
+				_exit(0);
 			}
 			if ((_strcmp(cmd[0], "env") == 0))
 				env(environ);

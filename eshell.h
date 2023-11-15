@@ -85,4 +85,3 @@ char *_strcpy(char *dest, char *src);
 int _strncmp(const char *s1, const char *s2, size_t n);
 void exec_ls(char **args);
 #endif
-                   

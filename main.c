@@ -9,8 +9,8 @@
 int main(int argc, char **argv, char **envp)
 {
 	int i = 0, status, count;
+	size_t buf = 0;
 	char **cmd, **commands, *input, *c;
-	size_t buf;
 	(void) argc;
 
 	if (isatty(STDIN_FILENO) == 1)
@@ -18,7 +18,7 @@ int main(int argc, char **argv, char **envp)
 	while (1)
 	{
 	prompt();
-	count = _getline(&c, &buf, stdin);
+	count = getline(&c, &buf, stdin);
 	input = space(c);
 	if (count == -1)
 	{

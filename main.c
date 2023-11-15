@@ -28,7 +28,9 @@ int main(int argc, char **argv)
 				_exit(0);
 			}
 			if ((_strcmp(cmd[0], "env") == 0))
+			{
 				env(environ);
+			}
 			if ((_strcmp(cmd[0], "ls") == 0))
 				exec_ls(cmd);
 		}

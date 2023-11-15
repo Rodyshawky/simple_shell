@@ -74,6 +74,8 @@ int _create_file(char **args);
 int execute_echo(char **args);
 int listCurrentDirectory(char **args);
 char *_getline(void);
+void free_env(char **env);
+int change_dir(char **cmd, __attribute__((unused))int st);
 char *handle_enter(char *string);
 char *space_handle(char *str);
 void hashtag_handle(char *buf);

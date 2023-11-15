@@ -16,4 +16,3 @@ void env(char **envp)
 	_puts("\n");
 	}
 }
-

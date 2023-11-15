@@ -1,4 +1,4 @@
-#include"shell.h"
+#include"eshell.h"
 /**
  * separator - Separates command recieved from stdin by ;
  * @input: String gathered from stdin

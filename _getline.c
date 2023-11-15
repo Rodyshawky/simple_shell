@@ -1,4 +1,4 @@
-#include"shell.h"
+#include"eshell.h"
 /**
  * space - Modifies the input string to remove preceeding whitespaces
  * @str: Input to be modifies

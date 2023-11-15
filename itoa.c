@@ -1,4 +1,4 @@
-#include"shell.h"
+#include"eshell.h"
 /**
  * _itoa - funciton that convert integer to character
  * @n: integer to convert

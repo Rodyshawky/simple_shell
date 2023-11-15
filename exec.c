@@ -1,4 +1,4 @@
-#include"shell.h"
+#include"eshell.h"
 
 /**
  * exec_cmd - Excutes commands found in predefined path

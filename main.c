@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "eshell.h"
 /**
 * main - main function simple shell program
 * @argc: count arg
@@ -7,22 +7,15 @@
 */
 int main(int argc, char **argv)
 {
-	int i = 0, status, count;
-	size_t buf = 0;
-	char **cmd, **commands, *input, *c;
+	int i = 0, status;
+	char **cmd, **commands, *input;
 	(void) argc;
 	if (isatty(STDIN_FILENO) == 1)
 	{
 	while (1)
 	{
 	prompt();
-	count = getline(&c, &buf, stdin);
-	input = space(c);
-	if (count == -1)
-	{
-		if (feof(stdin))
-			exit(EXIT_SUCCESS);
-	}
+	input = cmd_line();
 	if (input[0] == '\0')
 		continue;
 	commands = separator(input);
@@ -36,6 +29,8 @@ int main(int argc, char **argv)
 			}
 			if ((_strcmp(cmd[0], "env") == 0))
 				env(environ);
+			if ((_strcmp(cmd[0], "ls") == 0))
+				exec_ls(cmd);
 		}
 		status = exec_cmd(cmd, input);
 		if (status < 0)

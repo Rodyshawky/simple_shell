@@ -1,4 +1,4 @@
-#include"shell.h"
+#include"eshell.h"
 #include<string.h>
 /**
  * print_error - Displays error message

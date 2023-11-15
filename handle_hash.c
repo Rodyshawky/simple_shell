@@ -1,4 +1,4 @@
-#include"shell.h"
+#include"eshell.h"
 /**
  * hashtag_handle - function that removes everything after '#'
  * @str: input buffer

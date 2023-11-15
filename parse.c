@@ -1,4 +1,4 @@
-#include"shell.h"
+#include"eshell.h"
 /**
  * parse_cmd - Parses the command recieved from stdin
  * @input: String gathered from stdin
@@ -30,6 +30,5 @@ char **parse_cmd(char *input)
 		line = strtok(NULL, "\n\t\r\a ");
 	}
 	args[i] = NULL;
-
 	return (args);
 }

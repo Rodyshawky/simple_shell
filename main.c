@@ -38,13 +38,12 @@ int main(int argc, char **argv, char **envp)
 				_exit(0);
 				free(commands);
 			}
+			if ((_strcmp(cmd[0], "env") == 0))
+				env(envp);
 		}
 		status = exec_cmd(cmd, input);
-		if (status != 0)
+		if (status == -1)
 			e_print(argv[0]);
-
-	if ((_strcmp(cmd[0], "env") == 0))
-		env(envp);
 	}
 	}
 	return (0);

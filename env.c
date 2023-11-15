@@ -14,5 +14,6 @@ void env(char **envp)
 	all_env = *env;
 	_puts(all_env);
 	_puts("\n");
+	}
 }
-}
+

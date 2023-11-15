@@ -3,10 +3,9 @@
 * main - main function simple shell program
 * @argc: count arg
 * @argv: vector args
-* @envp: enviroment
 * Return: 0 if success
 */
-int main(int argc, char **argv, char **envp)
+int main(int argc, char **argv)
 {
 	int i = 0, status, count;
 	size_t buf = 0;
@@ -39,7 +38,7 @@ int main(int argc, char **argv, char **envp)
 				free(commands);
 			}
 			if ((_strcmp(cmd[0], "env") == 0))
-				env(envp);
+				env(environ);
 		}
 		status = exec_cmd(cmd, input);
 		if (status == -1)

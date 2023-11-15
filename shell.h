@@ -30,7 +30,7 @@ void prompt(void);
 char *_itoa(unsigned int n);
 int intlen(int num);
 void array_rev(char *arr, int len);
-void exitfun(char *str);
+void exitfun(void);
 void execute_args(char *token);
 int get_path(char **token);
 char *_strcat(char *dest, char *src);
@@ -64,7 +64,7 @@ size_t my_strcspn(const char *s, const char *reject);
 /** execve function**/
 int execve(const char *pathname, char *const argv[], char *const envp[]);
 int execute(char **argv);
-
+void _exit(void);
 /**commands*/
 char *search_path(char *file);
 int execute_cd(char **args);

@@ -5,7 +5,7 @@
 * @argv: vector args
 * Return: 0 if success
 */
-int main(int argc, char **argv)
+int main(int argc, char **argv, char **envp)
 {
 	int i = 0, status;
 	char **cmd, **commands, *input;
@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 				free(commands);
 			}
 			if ((_strcmp(cmd[0], "env") == 0))
-				env(environ);
+				env(envp);
 			if ((_strcmp(cmd[0], "ls") == 0))
 				exec_ls(cmd);
 		}

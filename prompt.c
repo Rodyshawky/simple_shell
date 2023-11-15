@@ -26,7 +26,6 @@ char *cmd_line(void)
 		if (feof(stdin))
 		{
 			exit(EXIT_SUCCESS);
-			free(c);
 		}
 	}
 	return (input);

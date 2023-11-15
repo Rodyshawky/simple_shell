@@ -27,14 +27,14 @@ int main(int argc, char **argv)
 				_exit(0);
 				free(commands);
 			}
-			if ((_strcmp(cmd[0], "env") == 0))
-				env(environ);
 			if ((_strcmp(cmd[0], "ls") == 0))
 				exec_ls(cmd);
 		}
 		status = exec_cmd(cmd, input);
 		if (status < 0)
 			e_print(argv[0]);
+		if ((_strcmp(cmd[0], "env") == 0))
+			env(environ);
 	}
 	}
 	return (0);

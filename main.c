@@ -11,7 +11,6 @@ int main(int argc, char **argv)
 	size_t buf = 0;
 	char **cmd, **commands, *input, *c;
 	(void) argc;
-	
 	if (isatty(STDIN_FILENO) == 1)
 	{
 	while (1)
@@ -22,9 +21,7 @@ int main(int argc, char **argv)
 	if (count == -1)
 	{
 		if (feof(stdin))
-		{
 			exit(EXIT_SUCCESS);
-		}
 	}
 	if (input[0] == '\0')
 		continue;
@@ -38,15 +35,11 @@ int main(int argc, char **argv)
 				free(commands);
 			}
 			if ((_strcmp(cmd[0], "env") == 0))
-			{
 				env(environ);
-			}
 		}
 		status = exec_cmd(cmd, input);
 		if (status < 0)
-		{
 			e_print(argv[0]);
-		}
 	}
 	}
 	return (0);

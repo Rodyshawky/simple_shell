@@ -20,12 +20,13 @@ char *cmd_line(void)
 	int count;
 
 	count = getline(&c, &buf, stdin);
+	input = malloc(sizeof(char*) * count);
 	input = space(c);
 	if (count == -1)
 	{
 		if (feof(stdin))
 		{
-			free(c);
+			free(input);
 			exit(EXIT_SUCCESS);
 		}
 	}

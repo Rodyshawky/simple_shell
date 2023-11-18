@@ -31,6 +31,8 @@ int main(int argc, char **argv)
 			{
 				env(environ);
 			}
+			if ((_strcmp(cmd[0], "ls") == 0))
+				exec_ls(cmd);
 		}
 		status = exec_cmd(cmd, input);
 		if (status < 0)
